@@ -1,37 +1,39 @@
-# -Instalacion-de-CMS-en-arquitectura-de-3-capas-en-alta-disponibilidad
+# Instalación de CMS en Arquitectura de 3 Capas en Alta Disponibilidad
 
-# Índice
+## Índice
 
-1. [Introducción](#introduccion)
-   1.1. [Objetivo del Proyecto](#objetivo-del-proyecto)  
-   1.2. [Direccionamiento IP](#direccionamiento-ip)
+1. [Introducción](#introducción)
+   - [Objetivo del Proyecto](#objetivo-del-proyecto)  
+   - [Direccionamiento IP](#direccionamiento-ip)
 
-2. [Instalación y Configuración](#instalacion-y-configuracion)
-   - [Instalación de Vagrant y VirtualBox](#instalacion-de-vagrant-y-virtualbox)  
-   - [Aprovisionamiento de Máquinas Virtuales con Vagrant](#aprovisionamiento-de-maquinas-virtuales-con-vagrant)  
-   - [Configuración del Balanceador de Carga](#configuracion-del-balanceador-de-carga)  
-   - [Configuración de Servidores Web (Nginx)](#configuracion-de-servidores-web-nginx)  
-   - [Configuración del Servidor NFS y PHP-FPM](#configuracion-del-servidor-nfs-y-php-fpm)  
-   - [Configuración de la Base de Datos MariaDB](#configuracion-de-la-base-de-datos-mariadb)  
-   - [Configuración del CMS (OwnCloud o Joomla)](#configuracion-del-cms-owncloud-o-joomla)  
-   - [Configuración de SSL](#configuracion-de-ssl)
+2. [Instalación y Configuración](#instalación-y-configuración)
+   - [Instalación de Vagrant y VirtualBox](#instalación-de-vagrant-y-virtualbox)  
+   - [Aprovisionamiento de Máquinas Virtuales con Vagrant](#aprovisionamiento-de-máquinas-virtuales-con-vagrant)  
+   - [Configuración del Balanceador de Carga](#configuración-del-balanceador-de-carga)  
+   - [Configuración de Servidores Web (Nginx)](#configuración-de-servidores-web-nginx)  
+   - [Configuración del Servidor NFS y PHP-FPM](#configuración-del-servidor-nfs-y-php-fpm)  
+   - [Configuración de la Base de Datos MariaDB](#configuración-de-la-base-de-datos-mariadb)  
+   - [Configuración del CMS (OwnCloud o Joomla)](#configuración-del-cms-owncloud-o-joomla)  
+   - [Configuración de SSL](#configuración-de-ssl)
 
-3. [Pruebas y Verificación](#pruebas-y-verificacion)
+3. [Pruebas y Verificación](#pruebas-y-verificación)
 
-4. [Visualización de la Aplicación en Funcionamiento](#visualizacion-de-la-aplicacion-en-funcionamiento)  
+4. [Visualización de la Aplicación en Funcionamiento](#visualización-de-la-aplicación-en-funcionamiento)  
 
 5. [Errores Comunes y Soluciones](#errores-comunes-y-soluciones)
 
-## 1. Introduccion
-La clase de ASIR 2º hemos tenido que hacer un CMS de 3 capas:
-Capa 1: Balanceador  
-Capa 2: 2 Servidores de BackEnds y un NFS  
-Capa 3: Base de datos (Mariadb)
+---
 
-### 1.1 Objetivo del Proyecto
+## 1. Introducción
+La clase de ASIR 2º hemos tenido que hacer un CMS de 3 capas:
+- **Capa 1**: Balanceador  
+- **Capa 2**: 2 Servidores de BackEnds y un NFS  
+- **Capa 3**: Base de datos (Mariadb)
+
+### Objetivo del Proyecto
 Acceder al balanceador con una IP pública, que este distribuya las peticiones de los usuarios entre los 2 backends, que en NFS les está compartiendo la carpeta con el OwnCloud y que accedan a la información de la base de datos para logearte al OwnCloud.
 
-### 1.2 Direccionamiento IP
+### Direccionamiento IP
 
 **Balanceador**  
 IP pública capa 1: `192.168.x.x`  
@@ -52,7 +54,7 @@ IP privada capa 2: `192.168.56.14`
 
 ---
 
-## 2. Instalacion y Configuracion
+## 2. Instalación y Configuración
 Editamos el Vagrantfile para crear la estructura de la prueba.
 
 ### Instalación de Vagrant y VirtualBox  
@@ -81,18 +83,15 @@ Instalación y configuración de un certificado SSL con Let's Encrypt.
 
 ---
 
-## 3. Pruebas y Verificacion
+## 3. Pruebas y Verificación
 Una vez se hayan instalado todos los aprovisionamientos, comprobamos que todo vaya correctamente introduciendo el nombre del dominio o la IP en el navegador.
 
 ---
 
-## 4. Visualizacion de la Aplicacion en Funcionamiento
+## 4. Visualización de la Aplicación en Funcionamiento
 Incluye capturas de pantalla mostrando el funcionamiento de la aplicación.
 
 ---
 
 ## 5. Errores Comunes y Soluciones
 Lo que más me ha costado ha sido poner el dominio en los servidores de backend, los errores que me daba eran relacionados con...
-
-
-
