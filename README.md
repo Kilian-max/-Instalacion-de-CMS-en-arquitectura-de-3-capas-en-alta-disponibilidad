@@ -2,7 +2,7 @@
 
 ## Índice
 
-1. [Introduccion](#introducción)
+1. [Introducción](#introduccion)
    - [Objetivo del Proyecto](#objetivo-del-proyecto)  
    - [Direccionamiento IP](#direccionamiento-ip)
 
