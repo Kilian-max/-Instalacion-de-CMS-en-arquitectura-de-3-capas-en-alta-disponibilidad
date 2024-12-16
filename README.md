@@ -2,11 +2,11 @@
 
 ## Índice
 
-1. [Introducción](#introducción)
+1. [Introduccion](#introducción)
    - [Objetivo del Proyecto](#objetivo-del-proyecto)  
    - [Direccionamiento IP](#direccionamiento-ip)
 
-2. [Instalación y Configuración](#instalación-y-configuración)
+2. [Instalación y Configuración](#instalacion-y-configuracion)
    - [Instalación de Vagrant y VirtualBox](#instalación-de-vagrant-y-virtualbox)  
    - [Aprovisionamiento de Máquinas Virtuales con Vagrant](#aprovisionamiento-de-máquinas-virtuales-con-vagrant)  
    - [Configuración del Balanceador de Carga](#configuración-del-balanceador-de-carga)  
@@ -18,7 +18,7 @@
 
 3. [Pruebas y Verificación](#pruebas-y-verificación)
 
-4. [Visualización de la Aplicación en Funcionamiento](#visualización-de-la-aplicación-en-funcionamiento)  
+4. [Visualización de la Aplicación en Funcionamiento](#visualizacion-de-la-aplicación-en-funcionamiento)  
 
 5. [Errores Comunes y Soluciones](#errores-comunes-y-soluciones)
 
