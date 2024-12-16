@@ -2,25 +2,25 @@
 
 ## Índice
 
-1. [Introducción](#introduccion)
-   - [Objetivo del Proyecto](#objetivo-del-proyecto)  
-   - [Direccionamiento IP](#direccionamiento-ip)
+1. [Introducción](#1-introducción)
+   - [Objetivo del Proyecto](#11-objetivo-del-proyecto)  
+   - [Direccionamiento IP](#12-direccionamiento-ip)
 
-2. [Instalación y Configuración](#instalacion-y-configuracion)
-   - [Instalación de Vagrant y VirtualBox](#instalación-de-vagrant-y-virtualbox)  
-   - [Aprovisionamiento de Máquinas Virtuales con Vagrant](#aprovisionamiento-de-máquinas-virtuales-con-vagrant)  
-   - [Configuración del Balanceador de Carga](#configuración-del-balanceador-de-carga)  
-   - [Configuración de Servidores Web (Nginx)](#configuración-de-servidores-web-nginx)  
-   - [Configuración del Servidor NFS y PHP-FPM](#configuración-del-servidor-nfs-y-php-fpm)  
-   - [Configuración de la Base de Datos MariaDB](#configuración-de-la-base-de-datos-mariadb)  
-   - [Configuración del CMS (OwnCloud o Joomla)](#configuración-del-cms-owncloud-o-joomla)  
-   - [Configuración de SSL](#configuración-de-ssl)
+2. [Instalación y Configuración](#2-instalación-y-configuración)
+   - [Instalación de Vagrant y VirtualBox](#21-instalación-de-vagrant-y-virtualbox)  
+   - [Aprovisionamiento de Máquinas Virtuales con Vagrant](#22-aprovisionamiento-de-máquinas-virtuales-con-vagrant)  
+   - [Configuración del Balanceador de Carga](#23-configuración-del-balanceador-de-carga)  
+   - [Configuración de Servidores Web (Nginx)](#24-configuración-de-servidores-web-nginx)  
+   - [Configuración del Servidor NFS y PHP-FPM](#25-configuración-del-servidor-nfs-y-php-fpm)  
+   - [Configuración de la Base de Datos MariaDB](#26-configuración-de-la-base-de-datos-mariadb)  
+   - [Configuración del CMS (OwnCloud o Joomla)](#27-configuración-del-cms-owncloud-o-joomla)  
+   - [Configuración de SSL](#28-configuración-de-ssl)
 
-3. [Pruebas y Verificación](#pruebas-y-verificación)
+3. [Pruebas y Verificación](#3-pruebas-y-verificación)
 
-4. [Visualización de la Aplicación en Funcionamiento](#visualizacion-de-la-aplicación-en-funcionamiento)  
+4. [Visualización de la Aplicación en Funcionamiento](#4-visualización-de-la-aplicación-en-funcionamiento)  
 
-5. [Errores Comunes y Soluciones](#errores-comunes-y-soluciones)
+5. [Errores Comunes y Soluciones](#5-errores-comunes-y-soluciones)
 
 ---
 
@@ -30,10 +30,10 @@ La clase de ASIR 2º hemos tenido que hacer un CMS de 3 capas:
 - **Capa 2**: 2 Servidores de BackEnds y un NFS  
 - **Capa 3**: Base de datos (Mariadb)
 
-### Objetivo del Proyecto
+### 1.1 Objetivo del Proyecto
 Acceder al balanceador con una IP pública, que este distribuya las peticiones de los usuarios entre los 2 backends, que en NFS les está compartiendo la carpeta con el OwnCloud y que accedan a la información de la base de datos para logearte al OwnCloud.
 
-### Direccionamiento IP
+### 1.2 Direccionamiento IP
 
 **Balanceador**  
 IP pública capa 1: `192.168.x.x`  
@@ -57,28 +57,28 @@ IP privada capa 2: `192.168.56.14`
 ## 2. Instalación y Configuración
 Editamos el Vagrantfile para crear la estructura de la prueba.
 
-### Instalación de Vagrant y VirtualBox  
+### 2.1 Instalación de Vagrant y VirtualBox  
 Pasos para instalar Vagrant y VirtualBox.
 
-### Aprovisionamiento de Máquinas Virtuales con Vagrant  
+### 2.2 Aprovisionamiento de Máquinas Virtuales con Vagrant  
 Código para aprovisionar las máquinas virtuales.
 
-### Configuración del Balanceador de Carga  
+### 2.3 Configuración del Balanceador de Carga  
 Pasos de configuración del balanceador Nginx.
 
-### Configuración de Servidores Web (Nginx)  
+### 2.4 Configuración de Servidores Web (Nginx)  
 Detalles sobre la configuración de Nginx en los servidores web.
 
-### Configuración del Servidor NFS y PHP-FPM  
+### 2.5 Configuración del Servidor NFS y PHP-FPM  
 Configuración del servidor NFS y el motor PHP-FPM.
 
-### Configuración de la Base de Datos MariaDB  
+### 2.6 Configuración de la Base de Datos MariaDB  
 Instalación y configuración de la base de datos MariaDB.
 
-### Configuración del CMS (OwnCloud o Joomla)  
+### 2.7 Configuración del CMS (OwnCloud o Joomla)  
 Pasos para instalar y personalizar el CMS seleccionado.
 
-### Configuración de SSL  
+### 2.8 Configuración de SSL  
 Instalación y configuración de un certificado SSL con Let's Encrypt.
 
 ---
@@ -94,4 +94,4 @@ Incluye capturas de pantalla mostrando el funcionamiento de la aplicación.
 ---
 
 ## 5. Errores Comunes y Soluciones
-Lo que más me ha costado ha sido poner el dominio en los servidores de backend, los errores que me daba eran relacionados con...
+Lo que más me ha costado ha sido poner el dominio en los servidores de backend, los errores que me daba eran relacionados con  que nginx, no podia escuchar en el puerto 80 y no he sabido como solucionarlo.
