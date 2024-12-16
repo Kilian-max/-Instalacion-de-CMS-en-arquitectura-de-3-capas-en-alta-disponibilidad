@@ -56,6 +56,7 @@ IP privada capa 2: `192.168.56.14`
 
 ## 2. Instalación y Configuración
 Editamos el Vagrantfile para crear la estructura de la prueba.
+![Uploading image.png…]()
 
 ### 2.1 Instalación de Vagrant y VirtualBox  
 Pasos para instalar Vagrant y VirtualBox.
