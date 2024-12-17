@@ -69,7 +69,7 @@ Editamos el Vagrantfile para crear la estructura de la prueba.
 
 
 ### 2.5 Configuración del CMS (OwnCloud)  
-![image](https://github.com/user-attachments/assets/6ed2bda6-5df7-4a3d-ad14-3e76a4e45c79)
+![image](https://github.com/user-attachments/assets/e40b86a1-f90d-4f27-bf87-7d55a8053374)
 
 ---
 
