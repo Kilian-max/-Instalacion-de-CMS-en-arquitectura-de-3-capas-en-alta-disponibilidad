@@ -13,11 +13,9 @@
    - [Configuración de la Base de Datos MariaDB](#24-configuración-de-la-base-de-datos-mariadb)  
    - [Configuración del CMS (OwnCloud o Joomla)](#25-configuración-del-cms-owncloud-o-joomla)  
 
-3. [Pruebas y Verificación](#3-pruebas-y-verificación)
+3. [Pruebas y Verificación](#3-pruebas-y-verificación) 
 
-4. [Visualización de la Aplicación en Funcionamiento](#4-visualización-de-la-aplicación-en-funcionamiento)  
-
-5. [Errores Comunes y Soluciones](#5-errores-comunes-y-soluciones)
+4. [Errores Comunes y Soluciones](#5-errores-comunes-y-soluciones)
 
 ---
 
@@ -31,7 +29,6 @@ La clase de ASIR 2º hemos tenido que hacer un CMS de 3 capas:
 Acceder al balanceador con una IP pública, que este distribuya las peticiones de los usuarios entre los 2 backends, que en NFS les está compartiendo la carpeta con el OwnCloud y que accedan a la información de la base de datos para logearte al OwnCloud.
 
 ### 1.2 Direccionamiento IP
-
 **Balanceador**  
 IP pública capa 1: `192.168.8.115`  
 IP privada capa 2: `192.168.56.10`  
@@ -71,20 +68,16 @@ Editamos el Vagrantfile para crear la estructura de la prueba.
 ![image](https://github.com/user-attachments/assets/c4c3c33c-d849-4895-b9f6-b6cf38e678ec)
 
 
-### 2.5 Configuración del CMS (OwnCloud o Joomla)  
-Pasos para instalar y personalizar el CMS seleccionado.
+### 2.5 Configuración del CMS (OwnCloud)  
+![image](https://github.com/user-attachments/assets/6ed2bda6-5df7-4a3d-ad14-3e76a4e45c79)
 
 ---
 
 ## 3. Pruebas y Verificación
 Una vez se hayan instalado todos los aprovisionamientos, comprobamos que todo vaya correctamente introduciendo el nombre del dominio o la IP en el navegador.
+![image](https://github.com/user-attachments/assets/07760b22-f437-42de-a2c5-4e4da0a881ad)
 
 ---
 
-## 4. Visualización de la Aplicación en Funcionamiento
-Incluye capturas de pantalla mostrando el funcionamiento de la aplicación.
-
----
-
-## 5. Errores Comunes y Soluciones
+## 4. Errores Comunes y Soluciones
 Lo que más me ha costado ha sido poner el dominio en los servidores de backend, los errores que me daba eran relacionados con  que nginx, no podia escuchar en el puerto 80 y no he sabido como solucionarlo.
