@@ -15,7 +15,7 @@
 
 3. [Pruebas y Verificación](#3-pruebas-y-verificación) 
 
-4. [Errores Comunes y Soluciones](#5-errores-comunes-y-soluciones)
+4. [Errores Comunes y Soluciones](#4-errores-comunes-y-soluciones)
 
 ---
 
