@@ -30,7 +30,7 @@ Acceder al balanceador con una IP pública, que este distribuya las peticiones d
 
 ### 1.2 Direccionamiento IP
 **Balanceador**  
-IP pública capa 1: `192.168.8.115`  
+IP pública capa 1: `192.168.8.116`  
 IP privada capa 2: `192.168.56.10`  
 
 **WEB1**  
