@@ -7,14 +7,11 @@
    - [Direccionamiento IP](#12-direccionamiento-ip)
 
 2. [Instalación y Configuración](#2-instalación-y-configuración)
-   - [Instalación de Vagrant y VirtualBox](#21-instalación-de-vagrant-y-virtualbox)  
-   - [Aprovisionamiento de Máquinas Virtuales con Vagrant](#22-aprovisionamiento-de-máquinas-virtuales-con-vagrant)  
-   - [Configuración del Balanceador de Carga](#23-configuración-del-balanceador-de-carga)  
-   - [Configuración de Servidores Web (Nginx)](#24-configuración-de-servidores-web-nginx)  
-   - [Configuración del Servidor NFS y PHP-FPM](#25-configuración-del-servidor-nfs-y-php-fpm)  
-   - [Configuración de la Base de Datos MariaDB](#26-configuración-de-la-base-de-datos-mariadb)  
-   - [Configuración del CMS (OwnCloud o Joomla)](#27-configuración-del-cms-owncloud-o-joomla)  
-   - [Configuración de SSL](#28-configuración-de-ssl)
+   - [Instalación de Vagrant y VirtualBox](#21-instalación-de-vagrant-y-virtualbox)   
+   - [Configuración de Servidores Web (Nginx)](#22-configuración-de-servidores-web-nginx)  
+   - [Configuración del Servidor NFS y PHP-FPM](#23-configuración-del-servidor-nfs-y-php-fpm)  
+   - [Configuración de la Base de Datos MariaDB](#24-configuración-de-la-base-de-datos-mariadb)  
+   - [Configuración del CMS (OwnCloud o Joomla)](#25-configuración-del-cms-owncloud-o-joomla)  
 
 3. [Pruebas y Verificación](#3-pruebas-y-verificación)
 
@@ -36,7 +33,7 @@ Acceder al balanceador con una IP pública, que este distribuya las peticiones d
 ### 1.2 Direccionamiento IP
 
 **Balanceador**  
-IP pública capa 1: `192.168.x.x`  
+IP pública capa 1: `192.168.8.115`  
 IP privada capa 2: `192.168.56.10`  
 
 **WEB1**  
@@ -56,33 +53,26 @@ IP privada capa 2: `192.168.56.14`
 
 ## 2. Instalación y Configuración
 Editamos el Vagrantfile para crear la estructura de la prueba.
-
 ![image](https://github.com/user-attachments/assets/8a9be94e-d16b-4ef6-95c4-502e80fc256c)
 
+### 2.1 Configuración del Balanceador de Carga  
+![image](https://github.com/user-attachments/assets/b25049cd-f057-4a91-a5a8-a203b6d7ce4e)
 
-### 2.1 Instalación de Vagrant y VirtualBox  
-Pasos para instalar Vagrant y VirtualBox.
 
-### 2.2 Aprovisionamiento de Máquinas Virtuales con Vagrant  
-Código para aprovisionar las máquinas virtuales.
+### 2.2 Configuración de Servidores Web (Nginx)  
+![image](https://github.com/user-attachments/assets/6c516998-1302-4154-80db-943f5aaa90ff)
 
-### 2.3 Configuración del Balanceador de Carga  
-Pasos de configuración del balanceador Nginx.
 
-### 2.4 Configuración de Servidores Web (Nginx)  
-Detalles sobre la configuración de Nginx en los servidores web.
+### 2.3 Configuración del Servidor NFS y PHP-FPM  
+![image](https://github.com/user-attachments/assets/c8104d12-135c-4191-b0f3-abe220c63ad3)
 
-### 2.5 Configuración del Servidor NFS y PHP-FPM  
-Configuración del servidor NFS y el motor PHP-FPM.
 
-### 2.6 Configuración de la Base de Datos MariaDB  
-Instalación y configuración de la base de datos MariaDB.
+### 2.4 Configuración de la Base de Datos MariaDB  
+![image](https://github.com/user-attachments/assets/c4c3c33c-d849-4895-b9f6-b6cf38e678ec)
 
-### 2.7 Configuración del CMS (OwnCloud o Joomla)  
+
+### 2.5 Configuración del CMS (OwnCloud o Joomla)  
 Pasos para instalar y personalizar el CMS seleccionado.
-
-### 2.8 Configuración de SSL  
-Instalación y configuración de un certificado SSL con Let's Encrypt.
 
 ---
 
